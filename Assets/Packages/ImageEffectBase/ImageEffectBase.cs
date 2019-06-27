@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Runtime.Serialization;
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(Camera))]
@@ -6,6 +7,7 @@ public class ImageEffectBase : MonoBehaviour
 {
     #region Field
 
+    [IgnoreDataMember]
     public Material material;
 
     #endregion Field
@@ -14,8 +16,7 @@ public class ImageEffectBase : MonoBehaviour
 
     protected virtual void Start()
     {
-        if (!SystemInfo.supportsImageEffects
-         || !this.material
+        if (!this.material
          || !this.material.shader.isSupported)
         {
             base.enabled = false;
