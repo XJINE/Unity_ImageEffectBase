@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Runtime.Serialization;
 
-[ExecuteInEditMode]
+[ExecuteAlways]
 [RequireComponent(typeof(Camera))]
 public class ImageEffectBase : MonoBehaviour
 {
