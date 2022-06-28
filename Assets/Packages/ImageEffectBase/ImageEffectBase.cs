@@ -1,13 +1,10 @@
 ﻿using UnityEngine;
-using System.Runtime.Serialization;
 
-[ExecuteAlways]
-[RequireComponent(typeof(Camera))]
+[ExecuteAlways, RequireComponent(typeof(Camera))]
 public class ImageEffectBase : MonoBehaviour
 {
     #region Field
 
-    [IgnoreDataMember]
     public Material material;
 
     #endregion Field
@@ -16,16 +13,12 @@ public class ImageEffectBase : MonoBehaviour
 
     protected virtual void Start()
     {
-        if (!this.material
-         || !this.material.shader.isSupported)
-        {
-            base.enabled = false;
-        }
+        enabled = material && material.shader.isSupported;
     }
 
     protected virtual void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
-        Graphics.Blit(source, destination, this.material);
+        Graphics.Blit(source, destination, material);
     }
 
     #endregion Method

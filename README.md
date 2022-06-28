@@ -1,11 +1,13 @@
 # Unity_ImageEffectBase
 
-<img src="https://github.com/XJINE/Unity_ImageEffectBase/blob/master/Screenshot.png" width="100%" height="auto" />
+<img src="https://github.com/XJINE/Unity_ImageEffectBase/blob/main/Screenshot.png" width="100%" height="auto" />
 
 Minimum resources to create ImageEffect.
 
-## Import to Your Project
+## Importing
 
-You can import this asset from UnityPackage.
+You can use Package Manager or import it directly.
 
-- [ImageEffectBase.unitypackage](https://github.com/XJINE/Unity_ImageEffectBase/blob/master/ImageEffectBase.unitypackage)
+```
+https://github.com/XJINE/Unity_ImageEffectBase.git?path=Assets/Packages/ImageEffectBase
+```
